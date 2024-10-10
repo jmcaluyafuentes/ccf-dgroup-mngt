@@ -1,8 +1,83 @@
-# React + Vite
+# CCF DGroup Connect App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page application that displays a list of DGroups in CCF Australia.
 
-Currently, two official plugins are available:
+## Deployed App
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Access the deployed App at https://ccf-dgroups.netlify.app/
+
+## Github Repository
+
+View the source code and project details on GitHub repository: https://github.com/jmcaluyafuentes/ccf-dgroup-mngt
+
+## Features
+
+- Displays a list of DGroups, showing the DGroup name, life stage, and satellite name for each group.
+- The DGroups are sorted alphabetically by DGroup name for easy navigation.
+- Users can filter the list based on satellite and/or life stage, allowing them to view only the DGroups that may be of interest for joining.
+- Users can click on a DGroup to view its detailed information, providing a deeper insight into the group.
+
+## Installation and Set Up Instructions
+
+Follow these steps to get the project running on your local machine:
+
+### 1. Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js  
+- npm (Node Package Manager)
+
+### 2. Clone the Repository
+
+First, clone the repository to your local machine:
+
+```
+git clone https://github.com/jmcaluyafuentes/ccf-dgroup-mngt.git
+```
+
+Navigate to the project directory:
+
+```
+cd ccf-dgroup-mngt
+```
+
+### 3. Install Dependencies
+
+Run the following command to install the required dependencies:
+
+```
+npm install
+```
+
+### 4. Running the Application
+
+To start the development server, run:
+
+```
+npm run dev
+```
+
+This will launch the application at http://localhost:5173/ by default.
+
+### 5. Running Tests
+
+```
+npm test
+```
+
+Note: Unit tests have not yet been implemented. The current focus is on finalizing and optimizing the folder structure for scalability. Once this is complete, unit tests will be added. Please check the repository for updates in the coming days.
+
+## Tech Stack
+
+- React: A JavaScript library for building user interfaces.
+- Vite: A build tool that provides a faster and leaner development experience for modern web projects.
+- JavaScript: The primary programming language used for application logic.
+- CSS: For styling and layout of the application.
+- Bulma: A modern CSS framework that provides ready-to-use components and a grid system that allows for quick styling and layout adjustments without needing extensive custom CSS.
+- Axios: A promise-based HTTP client for making API requests.
+- React Router: For handling routing and navigation within the application.
+
+## Browser Compatibility
+
+The application has been tested in Google Chrome at this stage and has not yet been tested in Safari.
