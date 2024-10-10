@@ -13,13 +13,3 @@ export const fetchDGroups = async () => {
     }
 };
 
-// Fetch a single DGroup by ID
-export const fetchDGroupById = async (id) => {
-    try {
-        const response = await axios.get(`${BASE_URL}/${id}`);
-        return response.data;
-    } catch (error) {
-        console.error(`Error fetching DGroup with id ${id}:`, error);
-        throw error;
-    }
-};

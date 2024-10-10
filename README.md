@@ -6,6 +6,8 @@ A single-page application that displays a list of DGroups in CCF Australia.
 
 Access the deployed App at https://ccf-dgroups.netlify.app/
 
+Note: The application has been tested in Google Chrome at this stage and has not yet been tested in Safari.
+
 ## Github Repository
 
 View the source code and project details on GitHub repository: https://github.com/jmcaluyafuentes/ccf-dgroup-mngt
@@ -78,6 +80,3 @@ Note: Unit tests have not yet been implemented. The current focus is on finalizi
 - Axios: A promise-based HTTP client for making API requests.
 - React Router: For handling routing and navigation within the application.
 
-## Browser Compatibility
-
-The application has been tested in Google Chrome at this stage and has not yet been tested in Safari.
