@@ -38,7 +38,7 @@ const Navbar = () => {
         <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <Link to="/" className="navbar-item">
-                    <img src="../public/ccf-logo-v1.png" alt="CCF Logo"/>
+                    <img src="../public/ccf-logo.png" alt="CCF Logo"/>
                 </Link>
                 <Link role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                     <span aria-hidden="true"></span>
