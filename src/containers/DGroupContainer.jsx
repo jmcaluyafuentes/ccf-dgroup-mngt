@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import useDGroups from '../hooks/useDGroups';
 import DGroupList from '../components/DGroupList';
+import DGroupDetails from '../components/DGroupDetails';
 import Filter from '../components/Filter';
 import { fetchDGroups } from '../api/dgroupApi';
 
 const DGroupContainer = () => {
     const [selectedSatellite, setSelectedSatellite] = useState('');
     const [selectedLifeStage, setSelectedLifeStage] = useState('');
+    const [selectedDGroup, setSelectedDGroup] = useState(null);
     const [allSatellites, setAllSatellites] = useState([]);
     const [allLifeStages, setAllLifeStages] = useState([]);
 
@@ -52,7 +54,9 @@ const DGroupContainer = () => {
     if (error) return <p>Error loading groups.</p>;
 
     return (
-        <>
+        <div>
+        {!selectedDGroup ? (
+            <>
             <Filter 
                 satellites={allSatellites}
                 lifeStages={allLifeStages}
@@ -62,7 +66,11 @@ const DGroupContainer = () => {
                 onLifeStageChange={handleLifeStageChange} 
             />
             <DGroupList dGroups={dGroups} onSelectDGroup={handleDGroupSelect} />
-        </>
+            </>
+        ) : (
+            <DGroupDetails dGroup={selectedDGroup} onBack={() => setSelectedDGroup(null)} />
+        )}
+        </div>
     );
 };
 
