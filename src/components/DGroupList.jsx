@@ -5,7 +5,7 @@ const DGroupList = ({ dGroups, onSelectDGroup }) => {
         <div className="columns is-multiline">
             {dGroups.sort((a, b) => a.name.localeCompare(b.name)).map((dGroup) => (
                 <div className="column is-one-third" key={dGroup.id}>
-                    <div className="card" onClick={() => onSelectDGroup(dGroup)}>
+                    <div className="card" id="dgroup-details" onClick={() => onSelectDGroup(dGroup)}>
                         <div className="card-content">
                             <div className="media">
                                 <div className="media-content">

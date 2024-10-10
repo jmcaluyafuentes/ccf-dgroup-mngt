@@ -54,6 +54,10 @@ label {
   color: black;
 }
 
+#dgroup-details:hover {
+  cursor: pointer;
+}
+
 .navbar-menu.is-active, .navbar-item {
   color: #65edd8;
   text-align: center;
