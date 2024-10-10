@@ -37,8 +37,8 @@ const Navbar = () => {
     return (
         <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <Link to="/" className="navbar-item">
-                    <img src="/public/ccf-logo.png" alt="CCF Logo"/>
+                <Link to="/" className="navbar-item navbar-logo-container ml-6">
+                    <img src="/public/ccf-logo.png" alt="CCF Logo" className="navbar-logo"/>
                 </Link>
                 <Link role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                     <span aria-hidden="true"></span>
@@ -50,7 +50,7 @@ const Navbar = () => {
 
             <div id="navbarMenu" className="navbar-menu">
                 <div className="navbar-end">
-                    <div className="navbar-item">
+                    <div className="navbar-items mr-6">
                         <div className="buttons">
                             <Link to="/" className="navbar-item">Home</Link>
                             <Link to="/dgroups" className="navbar-item">DGroups</Link>

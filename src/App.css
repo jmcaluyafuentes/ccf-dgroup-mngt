@@ -40,7 +40,8 @@ body {
   padding-bottom: 3rem;
 }
 
-.page {
+.page{
+  background-image: url("https://media.istockphoto.com/id/672056516/photo/pink-grungy-background.jpg?s=2048x2048&w=is&k=20&c=FhkYEbVC8ro0fFF6lk65hZIFcCJQgYV3lBlMhVu-mBI=");
   margin-top: 5vh;
   min-height: 80vh;
 }
@@ -48,6 +49,11 @@ body {
 .card-content {
   background-color: #f6fabb !important;
   border: 1px solid #b0b0b0;
+}
+
+.card-detail {
+  width: 50%;
+  margin: auto;
 }
 
 label {
@@ -59,13 +65,13 @@ label {
 }
 
 .navbar-menu.is-active, .navbar-item {
-  color: #65edd8;
+  color: black;
   text-align: center;
   font-size: 1.1rem;
 }
 
 .navbar-menu.is-active {
-  background-color: #2ffcf9;
+  background-color: #eaff96;
 }
 
 nav.navbar {
@@ -73,12 +79,36 @@ nav.navbar {
   top: 0;
   z-index: 1000;
   width: 100%;
-  background-color: #2ffcf9;
-  height: 5vh;
+  background-color: white;
+  height: 12vh;
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item {
+  transition: transform 0.3s ease;
 }
 
 .navbar-item:hover {
-  background-color: #9afffd;
+  background-color: white;
+  color: blue;
+  transform: scale(1.1);
+}
+
+.navbar-logo-container:hover {
+  background-color: white;
+}
+
+.navbar-logo {
+  transition: transform 0.3s ease;
+  transform: scale(2.2);
+}
+
+.navbar-logo:hover {
+  transform: scale(2.3);
 }
 
 .navbar-item:active, .navbar-item:focus, .navbar-item:focus-within {
@@ -87,7 +117,7 @@ nav.navbar {
 }
 
 .footer {
-  background-color: #2e2e2e;
+  background-color: #181B20;
   color: white;
   padding: 1rem 1.5rem !important;
   height: 15vh;
