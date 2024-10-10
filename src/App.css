@@ -81,3 +81,10 @@ nav.navbar {
   background-color: transparent;
   --bulma-navbar-item-background-a: 0;
 }
+
+.footer {
+  background-color: #2e2e2e;
+  color: white;
+  padding: 1rem 1.5rem !important;
+  height: 15vh;
+}
