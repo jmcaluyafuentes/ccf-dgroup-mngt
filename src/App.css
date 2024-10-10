@@ -49,3 +49,35 @@ body {
   background-color: #f6fabb !important;
   border: 1px solid #b0b0b0;
 }
+
+label {
+  color: black;
+}
+
+.navbar-menu.is-active, .navbar-item {
+  color: #65edd8;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.navbar-menu.is-active {
+  background-color: #2ffcf9;
+}
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #2ffcf9;
+  height: 5vh;
+}
+
+.navbar-item:hover {
+  background-color: #9afffd;
+}
+
+.navbar-item:active, .navbar-item:focus, .navbar-item:focus-within {
+  background-color: transparent;
+  --bulma-navbar-item-background-a: 0;
+}
