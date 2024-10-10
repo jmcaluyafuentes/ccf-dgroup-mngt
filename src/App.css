@@ -30,3 +30,22 @@ body {
 .subtitle {
   color: #2920ac !important;
 }
+
+.dgroup-page {
+  color: #2920ac !important;
+} 
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.page {
+  margin-top: 5vh;
+  min-height: 80vh;
+}
+
+.card-content {
+  background-color: #f6fabb !important;
+  border: 1px solid #b0b0b0;
+}
