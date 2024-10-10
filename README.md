@@ -14,10 +14,21 @@ View the source code and project details on GitHub repository: https://github.co
 
 ## Features
 
-- Displays a list of DGroups, showing the DGroup name, life stage, and satellite name for each group.
-- The DGroups are sorted alphabetically by DGroup name for easy navigation.
-- Users can filter the list based on satellite and/or life stage, allowing them to view only the DGroups that may be of interest for joining.
-- Users can click on a DGroup to view its detailed information, providing a deeper insight into the group.
+1. Displays a list of DGroups, showing the DGroup name, life stage, and satellite name for each group.
+
+2. The DGroups are sorted alphabetically by DGroup name for easy navigation.
+
+3. Users can filter the list based on satellite and/or life stage, allowing them to view only the DGroups that may be of interest for joining.
+
+4. Users can click on a DGroup to view its detailed information, providing a deeper insight into the group.
+
+#### App image of DGroup Page:
+
+![Screenshot of home page](./docs/HomePage.png)
+
+#### App image of DGroup Page:
+
+![Screenshot of page that displays all dgroups](./docs/DGroupPage.png)
 
 ## Installation and Set Up Instructions
 
@@ -79,4 +90,3 @@ Note: Unit tests have not yet been implemented. The current focus is on finalizi
 - Bulma: A modern CSS framework that provides ready-to-use components and a grid system that allows for quick styling and layout adjustments without needing extensive custom CSS.
 - Axios: A promise-based HTTP client for making API requests.
 - React Router: For handling routing and navigation within the application.
-
