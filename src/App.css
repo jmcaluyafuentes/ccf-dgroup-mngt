@@ -3,7 +3,7 @@ body {
 }
 
 #hero {
-  background-image: url("https://media.istockphoto.com/id/1398059965/photo/study-the-bible.jpg?s=2048x2048&w=is&k=20&c=s66RW218xsWD-xFh2XKpwA8Xi83rm2YVzh6z6pnVpPk=");
+  background-image: url("https://images.unsplash.com/photo-1485634476346-5c642f4b6722?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -23,17 +23,57 @@ body {
   justify-content: center;
 }
 
-.title {
-  color: #182fc6 !important;
+.title, .subtitle {
+  color: black !important;
 }
 
-.subtitle {
-  color: #2920ac !important;
+.title, .title-home, .subtitle-home, .cta-blue {
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
-.dgroup-page {
-  color: #2920ac !important;
-} 
+.title-home {
+  color: rgb(28, 28, 28) !important;
+}
+
+.subtitle-home {
+  color: white !important;
+  background-color: #27272d66;
+  padding: 3px 5px;
+}
+
+.cta-blue {
+  background-color: transparent !important;
+  font-size: 1rem !important;
+  width: 12em;
+  padding: 1em !important;
+  border-radius: 30px !important;
+  background-color: rgba(0, 255, 247, 0.91) !important;
+  color: black !important;
+}
+
+.cta-blue:hover {
+  color: black !important;
+  background-color: rgba(255, 255, 0, 0.76) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.5em !important;
+  }
+  .subtitle {
+    font-size: 1.1em !important;
+  }
+  .title-home {
+    font-size: 1.778em !important;
+  }
+  .subtitle-home {
+    font-size: 1.5em !important;
+    width: 90%;
+  }
+  .dgroup-page {
+    font-size: 1.7em !important;
+  }
+}
 
 .section {
   padding-top: 3rem;
@@ -41,14 +81,18 @@ body {
 }
 
 .page{
-  background-image: url("https://media.istockphoto.com/id/672056516/photo/pink-grungy-background.jpg?s=2048x2048&w=is&k=20&c=FhkYEbVC8ro0fFF6lk65hZIFcCJQgYV3lBlMhVu-mBI=");
+  background-image: url("https://images.unsplash.com/photo-1450849608880-6f787542c88a?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   margin-top: 80px;
   min-height: 80vh;
 }
 
+.dgroup-page {
+  color: white !important;
+}
+
 .card-content {
-  background-color: #f6fabb !important;
-  border: 1px solid #b0b0b0;
+  background-color: rgba(254, 254, 154, 0.797) !important;
+  border-radius: 7px !important;
 }
 
 .card-detail {
@@ -56,8 +100,73 @@ body {
   margin: auto;
 }
 
+@media screen and (max-width: 768px) {
+  .card-detail {
+    width: 90%;
+  }
+}
+
 label {
-  color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.label-name {
+  width: 5rem;
+}
+
+.label-next {
+  margin-left: 1.5rem;
+}
+
+select {
+  background-color: black;
+  color: white;
+  width: 15rem;
+  height: 2rem;
+  padding: 0 7px;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.custom-select select {
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* Remove default arrow for Safari */
+  padding-right: 30px; /* Space for custom arrow */
+}
+
+.custom-select::after {
+  content: '▼'; /* Custom arrow character */
+  position: absolute;
+  top: 50%;
+  right: 14px; /* Adjust positioning */
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent clicking on the arrow */
+}
+
+@media screen and (max-width: 768px) {
+  select {
+    width: 12rem;
+  }
+  .labels {
+    display: flex;
+    flex-direction: column;
+    align-items: start !important;
+  }
+  .label-next {
+    margin-left: 0;
+  }
+}
+
+#dgroup-details {
+  background-color: transparent !important;
 }
 
 #dgroup-details:hover {
@@ -154,7 +263,15 @@ nav.navbar {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #181B20 !important;
   color: white;
-  height: 150px !important;
+  height: 100px !important;
+  --bulma-footer-padding: 1rem !important;
+}
+
+p {
+  margin-block-end: 5px !important;
 }
