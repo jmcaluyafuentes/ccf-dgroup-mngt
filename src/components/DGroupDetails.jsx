@@ -2,7 +2,7 @@ import React from 'react';
 
 const DGroupDetails = ({ dGroup, onBack }) => {
     return (
-        <div className="card">
+        <div className="card card-detail">
             <div className="card-content">
                 <h2 className="title is-4">{dGroup.name}</h2>
                 <p className="subtitle is-6 mt-5 mb-1">

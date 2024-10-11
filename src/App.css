@@ -40,14 +40,20 @@ body {
   padding-bottom: 3rem;
 }
 
-.page {
-  margin-top: 5vh;
+.page{
+  background-image: url("https://media.istockphoto.com/id/672056516/photo/pink-grungy-background.jpg?s=2048x2048&w=is&k=20&c=FhkYEbVC8ro0fFF6lk65hZIFcCJQgYV3lBlMhVu-mBI=");
+  margin-top: 80px;
   min-height: 80vh;
 }
 
 .card-content {
   background-color: #f6fabb !important;
   border: 1px solid #b0b0b0;
+}
+
+.card-detail {
+  width: 50%;
+  margin: auto;
 }
 
 label {
@@ -58,27 +64,62 @@ label {
   cursor: pointer;
 }
 
-.navbar-menu.is-active, .navbar-item {
-  color: #65edd8;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.navbar-menu.is-active {
-  background-color: #2ffcf9;
-}
-
 nav.navbar {
   position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
-  background-color: #2ffcf9;
-  height: 5vh;
+  background-color: white;
+  height: 80px;
 }
 
-.navbar-item:hover {
-  background-color: #9afffd;
+.navbar-logo-container {
+  width: 10vw;
+  background-color: white !important;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-logo-container {
+    width: 80px;
+  }
+}
+
+.navbar-logo {
+  transition: transform 0.3s ease;
+  transform: scale(2.2);
+}
+
+.navbar-logo:hover {
+  transform: scale(2.4);
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  height: 100%;
+}
+
+.navbar-option {
+  color: black;
+  text-align: center;
+  font-size: 1.1rem;
+  background-color: white;
+  width: 6vw;
+}
+
+.navbar-option:hover {
+  background-color: white;
+  font-weight: bold;
+}
+
+.navbar-contact {
+  width: 12vw;
+  margin-left: 1rem;
 }
 
 .navbar-item:active, .navbar-item:focus, .navbar-item:focus-within {
@@ -86,9 +127,34 @@ nav.navbar {
   --bulma-navbar-item-background-a: 0;
 }
 
+@media screen and (max-width: 1023px) {
+  .navbar-menu.is-active {
+      display: flex !important;
+      flex-direction: column !important;
+      background-color: white;
+  }
+
+  .navbar-items {
+    margin-right: 0 !important;
+  }
+
+  .buttons {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .navbar-option {
+    width: 100%;
+  }
+  
+  .navbar-contact {
+    margin-left: 0px;
+  }
+}
+
 .footer {
-  background-color: #2e2e2e;
+  background-color: #181B20 !important;
   color: white;
-  padding: 1rem 1.5rem !important;
-  height: 15vh;
+  height: 150px !important;
 }
