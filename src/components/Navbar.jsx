@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-
     useEffect(() => {
         // Function to toggle menu visibility
         const toggleMenu = (event) => {
@@ -37,25 +36,26 @@ const Navbar = () => {
     return (
         <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <Link to="/" className="navbar-item navbar-logo-container ml-6">
-                    <img src="/public/ccf-logo.png" alt="CCF Logo" className="navbar-logo"/>
+                <Link to="/" className="navbar-item navbar-logo-container">
+                    <img src="/ccf-logo.png" alt="CCF Logo" className="navbar-logo"/>
                 </Link>
-                <Link role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+
+                {/* Burger menu button */}
+                <button role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
-                </Link>
+                </button>
             </div>
 
             <div id="navbarMenu" className="navbar-menu">
                 <div className="navbar-end">
-                    <div className="navbar-items mr-6">
+                    <div className="navbar-items">
                         <div className="buttons">
-                            <Link to="/" className="navbar-item">Home</Link>
-                            <Link to="/dgroups" className="navbar-item">DGroups</Link>
-                            <Link to="#" className="navbar-item">Join Us</Link>
-                            <Link to="#" className="navbar-item">Contact Us</Link>
+                            <Link to="/" className="navbar-item navbar-option">Home</Link>
+                            <Link to="/dgroups" className="navbar-item navbar-option">DGroups</Link>
+                            <Link to="#" className="navbar-item navbar-option navbar-contact">Contact Us</Link>
                         </div>
                     </div>
                 </div>

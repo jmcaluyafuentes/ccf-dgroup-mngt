@@ -64,42 +64,48 @@ label {
   cursor: pointer;
 }
 
-.navbar-menu.is-active, .navbar-item {
-  color: black;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.navbar-menu.is-active {
-  background-color: #eaff96;
-}
-
 nav.navbar {
   position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
   background-color: white;
-  height: 12vh;
+  height: 80px;
 }
 
 .navbar-items {
   display: flex;
   align-items: center;
+  margin-right: 24px;
 }
 
-.navbar-item {
-  transition: transform 0.3s ease;
+.navbar-brand {
+  height: 100%;
 }
 
-.navbar-item:hover {
+.navbar-option {
+  color: black;
+  text-align: center;
+  font-size: 1.1rem;
   background-color: white;
-  color: blue;
-  transform: scale(1.1);
+  width: 6vw;
 }
 
-.navbar-logo-container:hover {
+.navbar-option:hover {
   background-color: white;
+  font-weight: bold;
+}
+
+.navbar-contact {
+  width: 12vw;
+  margin-left: 1rem;
+}
+
+.navbar-logo-container {
+  width: 12vw;
+  background-color: white !important;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-logo {
@@ -108,12 +114,34 @@ nav.navbar {
 }
 
 .navbar-logo:hover {
-  transform: scale(2.3);
+  transform: scale(2.4);
 }
 
 .navbar-item:active, .navbar-item:focus, .navbar-item:focus-within {
   background-color: transparent;
   --bulma-navbar-item-background-a: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu.is-active {
+      display: flex !important;
+      flex-direction: column !important;
+      background-color: white;
+  }
+  .navbar-items {
+    margin-right: 0 !important;
+  }
+  .buttons {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .navbar-option {
+    width: 100%;
+  }
+  .navbar-contact {
+    margin-left: 0px;
+  }
 }
 
 .footer {
