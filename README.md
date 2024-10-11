@@ -6,8 +6,6 @@ A single-page application that displays a list of DGroups in CCF Australia.
 
 Access the deployed App at https://ccf-dgroups.netlify.app/
 
-Note: The application has been tested in Google Chrome at this stage and has not yet been tested in Safari.
-
 ## Github Repository
 
 View the source code and project details on GitHub repository: https://github.com/jmcaluyafuentes/ccf-dgroup-mngt
@@ -22,13 +20,17 @@ View the source code and project details on GitHub repository: https://github.co
 
 4. Users can click on a DGroup to view its detailed information, providing a deeper insight into the group.
 
-#### App image of DGroup Page:
+#### App screenshot of Home Page:
 
 ![Screenshot of home page](./docs/HomePage.png)
 
-#### App image of DGroup Page:
+#### App screenshot of DGroup Page:
 
 ![Screenshot of page that displays all dgroups](./docs/DGroupPage.png)
+
+#### App screenshot in mobile screen:
+
+![Screenshot of page that displays all dgroups](./docs/mobile-screen.png)
 
 ## Installation and Set Up Instructions
 
