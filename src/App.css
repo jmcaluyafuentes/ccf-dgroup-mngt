@@ -42,7 +42,7 @@ body {
 
 .page{
   background-image: url("https://media.istockphoto.com/id/672056516/photo/pink-grungy-background.jpg?s=2048x2048&w=is&k=20&c=FhkYEbVC8ro0fFF6lk65hZIFcCJQgYV3lBlMhVu-mBI=");
-  margin-top: 5vh;
+  margin-top: 80px;
   min-height: 80vh;
 }
 
@@ -73,10 +73,31 @@ nav.navbar {
   height: 80px;
 }
 
+.navbar-logo-container {
+  width: 10vw;
+  background-color: white !important;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-logo-container {
+    width: 80px;
+  }
+}
+
+.navbar-logo {
+  transition: transform 0.3s ease;
+  transform: scale(2.2);
+}
+
+.navbar-logo:hover {
+  transform: scale(2.4);
+}
+
 .navbar-items {
   display: flex;
   align-items: center;
-  margin-right: 24px;
 }
 
 .navbar-brand {
@@ -101,22 +122,6 @@ nav.navbar {
   margin-left: 1rem;
 }
 
-.navbar-logo-container {
-  width: 12vw;
-  background-color: white !important;
-  display: flex;
-  justify-content: center;
-}
-
-.navbar-logo {
-  transition: transform 0.3s ease;
-  transform: scale(2.2);
-}
-
-.navbar-logo:hover {
-  transform: scale(2.4);
-}
-
 .navbar-item:active, .navbar-item:focus, .navbar-item:focus-within {
   background-color: transparent;
   --bulma-navbar-item-background-a: 0;
@@ -128,25 +133,28 @@ nav.navbar {
       flex-direction: column !important;
       background-color: white;
   }
+
   .navbar-items {
     margin-right: 0 !important;
   }
+
   .buttons {
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
   }
+
   .navbar-option {
     width: 100%;
   }
+  
   .navbar-contact {
     margin-left: 0px;
   }
 }
 
 .footer {
-  background-color: #181B20;
+  background-color: #181B20 !important;
   color: white;
-  padding: 1rem 1.5rem !important;
-  height: 15vh;
+  height: 150px !important;
 }
