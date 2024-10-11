@@ -9,28 +9,36 @@ const Filter = ({
     onLifeStageChange,
     }) => {
     return (
-        <div className="mb-5">
+        <div className="labels mb-5">
             <label>
-                Satellite:
-                <select value={selectedSatellite} onChange={onSatelliteChange} className="ml-2 mr-2">
-                    <option value="">All Satellites</option>
-                        {satellites.map((satellite, index) => (
-                            <option key={index} value={satellite}>
-                            {satellite}
-                            </option>
-                        ))}
-                </select>
+                <span className="label-name">
+                    Satellite:
+                </span>
+                <div className="custom-select ml-2 mr-2">
+                    <select value={selectedSatellite} onChange={onSatelliteChange} className="ml-2 mr-2">
+                        <option value="">All Satellites</option>
+                            {satellites.map((satellite, index) => (
+                                <option key={index} value={satellite}>
+                                {satellite}
+                                </option>
+                            ))}
+                    </select>
+                </div>
             </label>
-            <label>
-                Life Stage:
-                <select value={selectedLifeStage} onChange={onLifeStageChange} className="ml-2">
-                    <option value="">All Life Stages</option>
-                        {lifeStages.map((lifeStage, index) => (
-                            <option key={index} value={lifeStage}>
-                            {lifeStage}
-                            </option>
-                        ))}
-                </select>
+            <label className="label-next">
+                <span className="label-name">
+                    Life Stage:
+                </span>
+                <div className="custom-select ml-2 mr-2">
+                    <select value={selectedLifeStage} onChange={onLifeStageChange} className="ml-2">
+                        <option value="">All Life Stages</option>
+                            {lifeStages.map((lifeStage, index) => (
+                                <option key={index} value={lifeStage}>
+                                {lifeStage}
+                                </option>
+                            ))}
+                    </select>
+                </div>
             </label>
         </div>
     );
