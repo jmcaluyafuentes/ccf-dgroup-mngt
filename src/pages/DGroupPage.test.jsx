@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import DGroupPage from './DGroupPage'
-import DGroupContainer from '../containers/DGroupContainer'
 
 // Mock the DGroupContainer component
 vi.mock('../containers/DGroupContainer', () => ({
