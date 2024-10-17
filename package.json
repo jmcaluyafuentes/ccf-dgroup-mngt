@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "test:safari": "npx playwright test --headed --browser=webkit"
+    "test:safari": "npx playwright test --config=playwright.config.js --headed --browser=webkit"
   },
   "dependencies": {
     "axios": "^1.7.7",
