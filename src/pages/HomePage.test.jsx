@@ -7,9 +7,9 @@ describe('HomePage Component', () => {
     // Helper function to render the component with Router
     const renderHomePage = () => {
         return render(
-                <BrowserRouter>
+            <BrowserRouter>
                 <HomePage />
-                </BrowserRouter>
+            </BrowserRouter>
         );
     }
 
