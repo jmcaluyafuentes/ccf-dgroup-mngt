@@ -99,6 +99,7 @@ body {
 .card-content {
   background-color: rgba(254, 254, 154, 0.797) !important;
   border-radius: 7px !important;
+  padding: 15px !important;
 }
 
 .card-detail {
@@ -134,6 +135,7 @@ select {
   border: none;
   appearance: none;
   -webkit-appearance: none;
+  font-size: 1em;
 }
 
 .custom-select {
@@ -171,9 +173,9 @@ select {
   }
 }
 
-#dgroup-details {
+/* #dgroup-details {
   background-color: transparent !important;
-}
+} */
 
 #dgroup-details:hover {
   cursor: pointer;
