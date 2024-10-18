@@ -11,6 +11,9 @@ const useDGroups = ({ satellite, lifeStage }) => {
         const getDGroups = async () => {
             setLoading(true);
             try {
+                // Simulate delay in receiving response data from API call to check UI behavior
+                // await new Promise((resolve) => setTimeout(resolve, 1000))
+
                 // Fetch DGroups from the API
                 const data = await fetchDGroups();
                 
