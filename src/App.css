@@ -60,6 +60,9 @@ body {
   .title {
     font-size: 1.5em !important;
   }
+  .title-detail {
+    font-size: 1.2rem !important;
+  }
   .subtitle {
     font-size: 1.1em !important;
   }
