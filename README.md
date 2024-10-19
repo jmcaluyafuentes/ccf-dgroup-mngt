@@ -32,6 +32,31 @@ View the source code and project details on GitHub repository: https://github.co
 
 ![Screenshot of page that displays all dgroups](./docs/mobile-screen.png)
 
+When a user clicks on one of the DGroups in the list, the app transitions to a detailed view of the selected DGroup.
+
+<img src="./docs/DGroupDetails.png" alt="DGroup details" width="300"/>
+
+## Loading and Error Handling
+
+The application uses loading and error states to inform users of the current status during data fetching.
+
+### Loading State
+
+A loading indicator is shown when the app is waiting for data:
+
+<img src="./docs/loading-state.png" alt="Loading State" width="300"/>
+
+### Error Handling
+If an error occurs, such as network issues, an error message is displayed with the option to retry:
+
+<img src="./docs/error-state.png" alt="Error State" width="300"/>
+
+## Handling No Available DGroups
+
+If there are no available DGroups that match the selected satellite and life stage, the application will display a friendly message to inform the user:
+
+<img src="./docs/no-available-dgroups.png" alt="No available dgroups found" width="300"/>
+
 ## Installation and Set Up Instructions
 
 Follow these steps to get the project running on your local machine:
