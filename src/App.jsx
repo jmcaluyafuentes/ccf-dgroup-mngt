@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage';
-import DGroupPage from './pages/DGroupPage';
+import DGroupContainer from './containers/DGroupContainer';
 import DGroupDetails from './components/DGroupDetails'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -12,9 +12,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/dgroups" >
-          <Route path="list" element={<DGroupPage />} />
-          <Route path=":id" element={<DGroupDetails />}/>
+        <Route path="/dgroups" element={<DGroupContainer />} >
+          <Route path=":id" element={<DGroupDetails />} />
         </ Route>
       </Routes>
       <Footer />
