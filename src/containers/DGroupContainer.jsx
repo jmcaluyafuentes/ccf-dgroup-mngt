@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom'
 import useDGroups from '../hooks/useDGroups';
 import DGroupList from '../components/DGroupList';
-import DGroupDetails from '../components/DGroupDetails';
 import Filter from '../components/Filter';
 import { fetchDGroups } from '../api/dgroupApi';
 
 const DGroupContainer = () => {
-    const [selectedSatellite, setSelectedSatellite] = useState('');
-    const [selectedLifeStage, setSelectedLifeStage] = useState('');
-    const [selectedDGroup, setSelectedDGroup] = useState(null);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [selectedSatellite, setSelectedSatellite] = useState(location.state?.selectedSatellite || "");
+    const [selectedLifeStage, setSelectedLifeStage] = useState(location.state?.selectedLifeStage || "");
     const [allSatellites, setAllSatellites] = useState([]);
     const [allLifeStages, setAllLifeStages] = useState([]);
-
+    
     const { dGroups, loading, error } = useDGroups({ satellite: selectedSatellite, lifeStage: selectedLifeStage });
 
     useEffect(() => {
@@ -47,7 +48,7 @@ const DGroupContainer = () => {
 
     // Handler for selecting a specific DGroup
     const handleDGroupSelect = (dGroup) => {
-        setSelectedDGroup(dGroup);
+        navigate(`/dgroups/${dGroup.id}`, { state: { dGroups, selectedSatellite, selectedLifeStage } });
     };
 
     const handleRetry = () => {
@@ -58,35 +59,29 @@ const DGroupContainer = () => {
 
     return (
         <div>
-            {!selectedDGroup ? (
-                <>
-                    <Filter 
-                        satellites={allSatellites}
-                        lifeStages={allLifeStages}
-                        selectedSatellite={selectedSatellite} 
-                        selectedLifeStage={selectedLifeStage} 
-                        onSatelliteChange={handleSatelliteChange} 
-                        onLifeStageChange={handleLifeStageChange} 
-                    />
-                    {loading ? (
-                        <p>Loading...</p>
-                    ) : (
-                        error ? (
-                            <div>
-                                <p className="has-text-danger">Error loading groups...</p>
-                                <button onClick={handleRetry} className="button is-normal is-danger mt-2">Retry</button>
-                            </div>
-                        ) : (
-                            dGroups.length > 0 ? (
-                                <DGroupList dGroups={dGroups} onSelectDGroup={handleDGroupSelect} />
-                            ) : (
-                                <p className="has-text-danger">{`Sorry, there are no available DGroups in "${selectedSatellite}" for "${selectedLifeStage}".`}</p>
-                            )
-                        )
-                    )}
-                </>
+            <Filter 
+                satellites={allSatellites}
+                lifeStages={allLifeStages}
+                selectedSatellite={selectedSatellite}
+                selectedLifeStage={selectedLifeStage} 
+                onSatelliteChange={handleSatelliteChange} 
+                onLifeStageChange={handleLifeStageChange} 
+            />
+            {loading ? (
+                <p>Loading...</p>
             ) : (
-                <DGroupDetails dGroup={selectedDGroup} onBack={() => setSelectedDGroup(null)} />
+                error ? (
+                    <div>
+                        <p className="has-text-danger">Error loading groups...</p>
+                        <button onClick={handleRetry} className="button is-normal is-danger mt-2">Retry</button>
+                    </div>
+                ) : (
+                    dGroups.length > 0 ? (
+                        <DGroupList dGroups={dGroups} onSelectDGroup={handleDGroupSelect} />
+                    ) : (
+                        <p className="has-text-danger">{`Sorry, there are no available DGroups in "${selectedSatellite}" for "${selectedLifeStage}".`}</p>
+                    )
+                )
             )}
         </div>
     );

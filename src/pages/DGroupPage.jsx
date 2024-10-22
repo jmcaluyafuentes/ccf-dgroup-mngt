@@ -5,7 +5,7 @@ const DGroup = () => {
     return (
         <section className="page section">
             <div className="container">
-                <h1 className="title dgroup-page is-2 has-text-centered">DGroup Information</h1>
+                <h1 className="title dgroup-page is-2 has-text-centered">List of DGroups</h1>
                 
                 {/* DGroupContainer component to display DGroups information */}
                 <DGroupContainer />

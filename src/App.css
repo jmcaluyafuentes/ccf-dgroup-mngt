@@ -1,3 +1,8 @@
+:root {
+  --header-height: 80px;
+  --footer-height: 100px;
+}
+
 body {
   background-color: #fffdea;
 }
@@ -85,8 +90,8 @@ body {
 
 .page {
   background-image: url("https://images.unsplash.com/photo-1450849608880-6f787542c88a?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  margin-top: 80px;
-  min-height: 75vh;
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
 @media screen and (max-width: 768px) {
